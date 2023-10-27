@@ -20,5 +20,5 @@ with col2:
 fx.sleep_check()
 fx.activity_check()
 fx.meds_check()
-
+fx.hygiene_check()
 

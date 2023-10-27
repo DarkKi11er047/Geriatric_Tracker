@@ -68,14 +68,9 @@ def hygiene_check(filename=FILENAME):
     hygiene = []
 
     for index, row in df[:len(df)].iterrows():
-        hygiene.append(bool(row["medication"]))
+        hygiene.append(str(row["hygiene"]))
 
     ls = len(hygiene)
 
-    if not hygiene[ls + 1:ls]:
-        st.info("Medicines not taken! Contact Caretaker at 9246115674")
-
-
-    else:
-        with st.expander("Medicines status"):
-            st.info("Medicines taken")
+    with st.expander("Hygiene status"):
+            st.info(hygiene[-1])
