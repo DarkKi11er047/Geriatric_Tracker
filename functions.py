@@ -10,7 +10,7 @@ def sleep_check(filename=FILENAME):
     sleep = []
 
     for index, row in df[:len(df)].iterrows():
-        sleep.append(float(row["sleep"]))
+        sleep.append(float(row["Sleep"]))
 
     ls = len(sleep)
     avg_sleep = sum(sleep[:ls - 3]) / (ls - 3)
@@ -30,7 +30,7 @@ def activity_check(filename=FILENAME):
     activity = []
 
     for index, row in df[:len(df)].iterrows():
-        activity.append(float(row["activity"]))
+        activity.append(float(row["Activity"]))
 
     ls = len(activity)
     avg_activity = sum(activity[:ls - 3]) / ls - 3
@@ -50,7 +50,7 @@ def meds_check(filename=FILENAME):
     meds = []
 
     for index, row in df[:len(df)].iterrows():
-        meds.append(bool(row["medication"]))
+        meds.append(bool(row["Medication"]))
 
     ls = len(meds)
 
@@ -68,9 +68,22 @@ def hygiene_check(filename=FILENAME):
     hygiene = []
 
     for index, row in df[:len(df)].iterrows():
-        hygiene.append(str(row["hygiene"]))
+        hygiene.append(str(row["Hygiene"]))
 
     ls = len(hygiene)
 
     with st.expander("Hygiene status"):
             st.info(hygiene[-1])
+
+def mental_check(filename=FILENAME):
+    df = pandas.read_csv(filename, sep=";")
+
+    mental = []
+
+    for index, row in df[:len(df)].iterrows():
+        mental.append(str(row["Mental State"]))
+
+    ls = len(mental)
+
+    with st.expander("Mental State"):
+            st.info(mental[-1])
