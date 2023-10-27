@@ -1,6 +1,5 @@
 import streamlit as st
-
-# import functions as fx
+import functions as fx
 
 st.set_page_config()
 st.title("Vijaya Homes for elders")
@@ -16,5 +15,10 @@ with col2:
     st.text("Age: 85")
     st.text("Gender: Male")
     st.text("Personal C.no: 9100343137")
+    st.text("Caretaker C.no: 9246115674")
+
+fx.sleep_check()
+fx.activity_check()
+fx.meds_check()
 
 
