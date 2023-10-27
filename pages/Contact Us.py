@@ -17,11 +17,13 @@ Subject: User submitted contact
 From {email}:
     {message}
 
-end of message
+End of message
 """
         print(message)
         send_email(message)
+        st.info("Email was sent!")
 
 st.title("Or Call us at 82312 48021")
 
 st.write("""Address: FJPG+FRQ, TPS Colony, Nagaram, Secunderabad, Telangana 501301""")
+st.write("https://maps.app.goo.gl/yhp2c8UfMVH3oxdo7")
