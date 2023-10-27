@@ -3,7 +3,7 @@ import functions as fx
 
 st.set_page_config()
 st.title("Vijaya Homes for elders")
-st.write("Welcome! This is the Home page", )
+st.subheader("Welcome! This is the Home page")
 
 col1, empt_col, col2 = st.columns([1.5, 0.5, 1.5])
 
@@ -21,4 +21,5 @@ fx.sleep_check()
 fx.activity_check()
 fx.meds_check()
 fx.hygiene_check()
+fx.mental_check()
 
