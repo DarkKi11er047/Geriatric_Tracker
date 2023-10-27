@@ -1,13 +1,13 @@
-sleep;activity;medication;mental state;notes
-7;3;True;Good;n/a
-7.5;2.5;True;Hostile;n/a
-8;3;True;Good;n/a
-7;3;True;Good;n/a
-7.5;2.5;True;Hostile;n/a
-8;3;True;Good;n/a
-7;3;True;Good;n/a
-7.5;2.5;True;Hostile;n/a
-8;3;True;Good;n/a
-6;3;True;Good;n/a
-5;2.5;True;Hostile;n/a
-6;3;False;Good;n/a
+sleep;activity;medication;mental state;hygiene
+7;3;True;Good;Took a bath, got dressed
+7.5;2.5;True;Hostile;Took a bath, got dressed
+8;3;True;Good;Took a bath, got dressed
+7;3;True;Good;Took a bath, got dressed
+7.5;2.5;True;Hostile;Took a bath, got dressed
+8;3;True;Good;Took a bath, got dressed
+7;3;True;Good;Took a bath, got dressed
+7.5;2.5;True;Hostile;Took a bath, got dressed
+8;3;True;Good;Took a bath, got dressed
+8;3;True;Good;Took a bath, got dressed
+8;2.5;True;Hostile;Took a bath, got dressed
+8;3;False;Good;Didn't bathe
