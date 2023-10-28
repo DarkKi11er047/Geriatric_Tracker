@@ -8,6 +8,7 @@ with st.form("upload-form"):
     try:
         ls = Image.open(l)
         st.image(ls)
+        st.success("File was Uploaded!")
     except AttributeError:
         pass
 
