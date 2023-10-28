@@ -17,10 +17,10 @@ def sleep_check(filename=FILENAME):
     sleep_3days = sum(sleep[ls:ls - 4:-1]) / 3
 
     if sleep_3days > 8 or sleep_3days < avg_sleep:
-        st.info("Patient requires attention with regards to sleep. Contact Caretaker at 9246115674")
+        st.info("Patient requires attention with regards to sleep. Contact Caretaker at 9246115674",icon="⚠")
     else:
         with st.expander("Sleep"):
-            st.info("Sleep is good")
+            st.info("Sleep is good",icon="✅")
 
 
 
@@ -33,14 +33,14 @@ def activity_check(filename=FILENAME):
         activity.append(float(row["Activity"]))
 
     ls = len(activity)
-    avg_activity = sum(activity[:ls - 3]) / ls - 3
+    avg_activity = sum(activity[:ls - 3]) / (ls - 3)
     activity_3days = sum(activity[ls:ls - 4:-1]) / 3
 
     if activity_3days < avg_activity:
-        st.info("Patient requires attention with regards to activity. Contact Caretaker at 9246115674")
+        st.info("Patient requires attention with regards to activity. Contact Caretaker at 9246115674",icon="⚠")
     else:
         with st.expander("Activity"):
-            st.info("Patient is active")
+            st.info("Patient is active",icon="✅")
 
 
 
@@ -55,12 +55,12 @@ def meds_check(filename=FILENAME):
     ls = len(meds)
 
     if not meds[ls + 1:ls]:
-        st.info("Medicines not taken! Contact Caretaker at 9246115674")
+        st.info("Medicines not taken! Contact Caretaker at 9246115674",icon="⚠")
 
 
     else:
         with st.expander("Medicines status"):
-            st.info("Medicines taken")
+            st.info("Medicines taken",icon="✅")
 
 def hygiene_check(filename=FILENAME):
     df = pandas.read_csv(filename, sep=";")

@@ -2,7 +2,14 @@ import streamlit as st
 import functions as fx
 
 st.set_page_config()
-st.title("Vijaya Homes for elders")
+
+col1,empty,col2 = st.columns([0.5,0.5,2])
+
+with col1:
+    st.image("vijayahomes.webp",width=200)
+
+with col2:
+    st.title("Vijaya Homes for elders")
 st.subheader("Welcome! This is the Home page")
 
 col1, empt_col, col2 = st.columns([1.5, 0.5, 1.5])
